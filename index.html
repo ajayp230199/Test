@@ -30,7 +30,7 @@
                 <label for="namefield">Your Name</label><br>
                 <input
                  type="text" 
-                 id="namefield" 
+                 id="nameField" 
                  placeholder="Enter here"
                  class="from-control"
                  size="71"
@@ -38,20 +38,21 @@
             </div>
 
             <div class="from-group mt-2">
-              <label for="contactfield">Your Contct</label><br>
+              <label for="contactField">Your Contct</label><br>
               <input 
               type="text" 
-              id="contactfield" 
+              id="contactField" 
               placeholder="Enter here"
               class="from-control"
               size="71"
               />
-          </div>
+            </div>
+
 
           <div class="from-group mt-2">
-            <label for="addressfield">Your Address</label><br>
+            <label for="addressField">Your Address</label><br>
             <textarea
-            id="addressfield" 
+            id="addressField" 
             placeholder="Enter here"
             class="from-control"
             rows="5"
@@ -59,13 +60,19 @@
             ></textarea>
            </div>
 
+
+           <div class="form-group mt-3">
+           <label for="">Salect your profile picture </label>
+           <input id="imgField"  type="file" class="form-control">
+
+           </div>
           <p class="text-secondary my-3">Important Links</p>
 
           <div class="from-group mt-2">
-            <label for="fbfield">Facebook</label><br>
+            <label for="fbField">Facebook</label><br>
             <input 
             type="text" 
-            id="contactfield" 
+            id="fbField" 
             placeholder="Enter here"
             class="from-control"
             size="71"
@@ -73,10 +80,10 @@
         </div>
 
         <div class="from-group mt-2">
-          <label for="instafield">Instagram</label><br>
+          <label for="instaField">Instagram</label><br>
           <input 
           type="text" 
-          id="contactfield" 
+          id="instaField" 
           placeholder="Enter here"
           class="from-control"
           size="71"
@@ -84,10 +91,10 @@
       </div>
 
       <div class="from-group mt-2">
-        <label for="linkedfield">LinkedIn</label><br>
+        <label for="linkedField">LinkedIn</label><br>
         <input 
         type="text" 
-        id="contactfield" 
+        id="linkedField" 
         placeholder="Enter here"
         class="from-control"
         size="71"
@@ -100,6 +107,7 @@
         <div class="from-group mt-2">
           <label for="field">Objective</label><br>
           <textarea
+          id="objectiveField"
           placeholder="Enter here"
           class="from-control"
           rows="5"
@@ -108,10 +116,10 @@
          </div>
 
          <div class="from-group mt-2" id="we">
-          <label for="field">Work Experience</label><br>
+          <label for="">Work Experience</label><br>
           <textarea
           placeholder="Enter here"
-          class="from-control wefield"
+          class="from-control weField"
           cols="74"
           ></textarea>
 
@@ -124,10 +132,10 @@
          </div>
 
          <div class="from-group mt-2" id="aq">
-          <label for="field">Academic Qualification</label><br>
+          <label for="">Academic Qualification</label><br>
           <textarea
           placeholder="Enter here"
-          class="from-control eqfield"
+          class="from-control eqField"
           cols="74"
           ></textarea>
           <div class="container  mt-2 text-center" id="aqAddButton">
@@ -137,12 +145,14 @@
       </div>
      </div>
      <div class="container text text-center my-3">
-      <button class="btn btn-primary btn-lg">Genrate Resume</button>
+      <button onclick="generateresume()" class="btn btn-primary btn-lg">
+      Generate Resume
+      </button>
 
      </div>
     </div>
-`<!-- resume templete-->
-<div class="container" id="resume-templete">
+`<!-- resume template-->
+<div class="container" id="resume-template">
 
   <div class="row">
     <div class="col-md-4 text-center py-4 background">
@@ -150,32 +160,31 @@
       <img 
       src="https://st.depositphotos.com/2101611/3925/v/600/depositphotos_39258143-stock-illustration-businessman-avatar-profile-picture.jpg" 
       alt=""
-
-    
      class="img-fluid myimg"
+     id="imgTemplate"
 
       />
       <div class="container">
-        <p> Ajay pardhi </p>
-        <p>+918959606795 </p>
-        <p> Surendra Palace Block B</p>
+        <p id="nameT1"> Ajay pardhi </p>
+        <p id="contactT">+918959606795 </p>
+        <p id="addressT"> Surendra Palace Block B</p>
 
         <hr>
 
         <p>
-          <a href="#1">https:/www.facebook.com/ajaypardhi</a>
+          <a id="fbT" href="#1">https:/www.facebook.com/ajaypardhi</a>
         </p>
         <p>
-          <a href="#1">https:/www.instagram.com/ajaypardhi</a>
+          <a id="instaT" href="#1">https:/www.instagram.com/ajaypardhi</a>
         </p>
         <p>
-          <a href="#1">https:/www.linkdin.com/ajaypardhi</a>
+          <a id="linkedT" href="#1">https:/www.linkdin.com/ajaypardhi</a>
         </p>
       </div>
     </div>
     <div class="col-md-8">
       <!--second col-->
-      <h1 class="text-center"style="font: weight 980">
+      <h1 id="nameT2" class="text-center"style="font: weight 980">
         Ajay pardhi
       </h1>
 
@@ -186,7 +195,8 @@
           <h3>Objective</h3>
         </div>
         <div class="card-body">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          <p id="objectiveT">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
              Praesentium aliquid, molestias reiciendis culpa est tenetur porro.
              Voluptatibus, sint! Nostrum enim hic voluptatum adipisci excepturi
              exercitationem distinctio eveniet corrupti sit voluptate quae
@@ -203,7 +213,7 @@
           <h3>work experience</h3>
         </div>
         <div class="card-body">
-         <ul>
+         <ul id="weT">
           <li>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, ducimus.
         </li>
@@ -225,7 +235,7 @@
           <h3>academic Qualification</h3>
         </div>
         <div class="card-body">
-         <ul>
+         <ul id="aqT">
           <li>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, ducimus.
         </li>
@@ -240,7 +250,7 @@
       </div>
 
 <div class="container mt-3 text-center">
-  <button class="btn background">
+  <button onclick="printresume()" class="btn background">
     Print Resume
   </button>
 </div>

@@ -1,9 +1,12 @@
 /* body{
     background-color:white(245, 245, 249);
 } */
-#resume-form{
-/*display: none;*/
-} 
+/* #resume-form{
+display: none;
+}  */
+  #resume-template{
+    display: none;
+}
 
 .myimg{
     border: 1px solid black;
