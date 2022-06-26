@@ -18,7 +18,7 @@
 </head>
 <body>
 
-   <div class="container">
+   <div class="container" id="resume-form">
      <h1 class="text-center my-2"style="color :blue; ">Online Resume Builder</h1>
 
      <div class="row">
@@ -33,7 +33,7 @@
                  id="namefield" 
                  placeholder="Enter here"
                  class="from-control"
-                 size="50"
+                 size="71"
                 />
             </div>
 
@@ -44,7 +44,7 @@
               id="contactfield" 
               placeholder="Enter here"
               class="from-control"
-              size="50"
+              size="71"
               />
           </div>
 
@@ -55,7 +55,7 @@
             placeholder="Enter here"
             class="from-control"
             rows="5"
-            cols="53"
+            cols="74"
             ></textarea>
            </div>
 
@@ -68,7 +68,7 @@
             id="contactfield" 
             placeholder="Enter here"
             class="from-control"
-            size="50"
+            size="71"
             />
         </div>
 
@@ -79,7 +79,7 @@
           id="contactfield" 
           placeholder="Enter here"
           class="from-control"
-          size="50"
+          size="71"
           />
       </div>
 
@@ -90,7 +90,7 @@
         id="contactfield" 
         placeholder="Enter here"
         class="from-control"
-        size="50"
+        size="71"
         />
     </div>
           </div>
@@ -103,31 +103,35 @@
           placeholder="Enter here"
           class="from-control"
           rows="5"
-          cols="53"
+          cols="74"
           ></textarea>
          </div>
 
-         <div class="from-group mt-2">
+         <div class="from-group mt-2" id="we">
           <label for="field">Work Experience</label><br>
           <textarea
           placeholder="Enter here"
           class="from-control wefield"
-          cols="53"
+          cols="74"
           ></textarea>
-          <div class="container mt-2 text-center" id="weAddButton">
-            <button onclick="addNewWEField" class="btn btn-primary btn-sm">Add</button>
+
+      
+          <div class="container text-center mt-2 " id="weAddButton">
+            <button onclick="addNewWEField()" class="btn btn-primary btn-sm">
+              Add
+            </button>
           </div>
          </div>
 
-         <div class="from-group mt-2">
+         <div class="from-group mt-2" id="aq">
           <label for="field">Academic Qualification</label><br>
           <textarea
           placeholder="Enter here"
           class="from-control eqfield"
-          cols="53"
+          cols="74"
           ></textarea>
           <div class="container  mt-2 text-center" id="aqAddButton">
-            <button class="btn btn-primary btn-sm">Add</button>
+            <button onclick="addNewAQField()" class="btn btn-primary btn-sm">Add</button>
           </div>
          </div>
       </div>
@@ -137,7 +141,113 @@
 
      </div>
     </div>
+`<!-- resume templete-->
+<div class="container" id="resume-templete">
 
+  <div class="row">
+    <div class="col-md-4 text-center py-4 background">
+      <!--first col-->
+      <img 
+      src="https://st.depositphotos.com/2101611/3925/v/600/depositphotos_39258143-stock-illustration-businessman-avatar-profile-picture.jpg" 
+      alt=""
+
+    
+     class="img-fluid myimg"
+
+      />
+      <div class="container">
+        <p> Ajay pardhi </p>
+        <p>+918959606795 </p>
+        <p> Surendra Palace Block B</p>
+
+        <hr>
+
+        <p>
+          <a href="#1">https:/www.facebook.com/ajaypardhi</a>
+        </p>
+        <p>
+          <a href="#1">https:/www.instagram.com/ajaypardhi</a>
+        </p>
+        <p>
+          <a href="#1">https:/www.linkdin.com/ajaypardhi</a>
+        </p>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <!--second col-->
+      <h1 class="text-center"style="font: weight 980">
+        Ajay pardhi
+      </h1>
+
+      <!-- Objective card -->
+
+      <div class="card mt-4">
+        <div class="card-header background">
+          <h3>Objective</h3>
+        </div>
+        <div class="card-body">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+             Praesentium aliquid, molestias reiciendis culpa est tenetur porro.
+             Voluptatibus, sint! Nostrum enim hic voluptatum adipisci excepturi
+             exercitationem distinctio eveniet corrupti sit voluptate quae
+             dolore magni ex labore ducimus delectus, dolor sed deleniti autem 
+             earum quos quas impedit. Harum tempora excepturi eum! Molestiae?
+            </p>
+        </div>
+      </div>
+
+      <!-- work experience-->
+
+      <div class="card mt-4">
+        <div class="card-header background">
+          <h3>work experience</h3>
+        </div>
+        <div class="card-body">
+         <ul>
+          <li>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, ducimus.
+        </li>
+        <li>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, ducimus.
+        </li>
+        <li>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, ducimus.
+        </li>
+         </ul>
+        </div>
+      </div>
+
+
+      <!--this tab  for academic Qualification-->
+
+      <div class="card mt-4">
+        <div class="card-header background">
+          <h3>academic Qualification</h3>
+        </div>
+        <div class="card-body">
+         <ul>
+          <li>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, ducimus.
+        </li>
+        <li>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, ducimus.
+        </li>
+        <li>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, ducimus.
+        </li>
+         </ul>
+        </div>
+      </div>
+
+<div class="container mt-3 text-center">
+  <button class="btn background">
+    Print Resume
+  </button>
+</div>
+    </div>
+  </div>
+
+</div>
     <script 
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
